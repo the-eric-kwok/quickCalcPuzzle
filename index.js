@@ -54,6 +54,14 @@
                 document.getElementById("show-answer").innerText = "显示答案";
             });
         });
+        document.body.addEventListener("click", () => {
+            // 点击答案输入框外面时让输入框失焦，以收起软键盘
+            document.body.focus();
+        })
+        // 触摸板禁止手指缩放
+        document.addEventListener('wheel', function (event) {
+            event.preventDefault()
+        }, { passive: false })
         refreshPuzzle();
     };
 })()
