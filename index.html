@@ -7,15 +7,20 @@
 
 <body>
     <div>
-        <input type="radio" name="type" id="type" value="multiply" checked><label>乘法</label>
-        <input type="radio" name="type" id="type" value="obelus"><label>除法</label>
-        <br><br>
-        <span id="puzzle">1 + 1 =</span>
-        <input type="number" id="user-answer">
-        <br><br>
-        <button id="show-answer">显示答案</button>
-        <span id="answer" hidden="hidden">2</span>
-        <br><br>
-        <button id="next">下一题</button>
+        <p>
+            <input type="radio" name="type" id="type" value="multiply" checked><label>乘法</label>
+            <input type="radio" name="type" id="type" value="obelus"><label>除法</label>
+        </p>
+        <p>
+            <span id="puzzle">1 + 1 =</span>
+            <input type="number" id="user-answer">
+        </p>
+        <p>
+            <button id="show-answer">显示答案</button>
+            <span id="answer" style="visibility: hidden;">2</span>
+        </p>
+        <p>
+            <button id="next">下一题</button>
+        </p>
     </div>
 </body>

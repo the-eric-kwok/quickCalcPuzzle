@@ -4,9 +4,14 @@
 
     function obelusPuzzleGenerator() {
         let opr1 = 0, opr2 = 0;
-        while (!(opr1 > 10000 && opr1 < 99999)) {
+        while (!(opr1 > 10000 && opr1 < 99999 && opr2 > 1)) {
             opr1 = parseFloat((Math.random() * 100000).toFixed(1));
             opr2 = parseFloat((Math.random() * 100).toFixed(1));
+            if (opr2 > 10) {
+                opr2 = parseInt(opr2);
+            } else if (opr2 < 10 && opr2 % 1 === 0) {
+                opr2 + parseFloat(((Math.random() + 0.1) * 0.9).toFixed(1));
+            }
         }
         return [opr1, opr2];
     }
@@ -34,16 +39,16 @@
 
     window.onload = function () {
         document.querySelector("#show-answer").addEventListener("click", function () {
-            document.querySelector("#answer").removeAttribute("hidden");
+            document.getElementById("answer").style = "visibility: none;";
         });
         document.querySelector("#next").addEventListener("click", function () {
             refreshPuzzle();
-            document.querySelector("#answer").setAttribute("hidden", "hidden");
+            document.getElementById("answer").style = "visibility: hidden;";
         });
         document.querySelectorAll('input[name="type"]').forEach(elem => {
             elem.addEventListener("click", function () {
                 refreshPuzzle();
-                document.querySelector("#answer").setAttribute("hidden", "hidden");
+                document.getElementById("answer").style = "visibility: hidden;";
             });
         })
         refreshPuzzle();

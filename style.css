@@ -5,10 +5,18 @@ div{
     
     position:absolute;
     left:0;
-    top: 0;
+    top: -25%;
     bottom: 0;
     right: 0;
     margin: auto;
+}
+
+p {
+    text-align:center;
+}
+
+#answer {
+    width: 30px;
 }
 
 input {
