@@ -1,11 +1,11 @@
 div{
-    width: 250px;
-    height: 50px;
+    width: 300pt;
+    height: 160pt;
     /* background: green; */
     
     position:absolute;
-    left:0;
-    top: -25%;
+    left: 0;
+    top: 0;
     bottom: 0;
     right: 0;
     margin: auto;
@@ -15,13 +15,21 @@ p {
     text-align:center;
 }
 
+#puzzle {
+    font-size: 20pt;
+}
+
 #answer {
+    font-size: 20pt;
     width: 30px;
 }
 
-input {
-    width: 50px;
+#user-answer {
+    width: 100pt;
+    height: 30pt;
+    font-size: 20pt;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
