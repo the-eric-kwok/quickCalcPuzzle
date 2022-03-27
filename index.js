@@ -58,6 +58,7 @@
 
     window.onload = function () {
         document.getElementById("show-answer").addEventListener("click", function () {
+            // 点击按钮监听器
             if (document.getElementById("show-answer").innerText === "显示答案") {
                 document.getElementById("answer").style = "visibility: none;";
                 document.getElementById("show-answer").innerText = "下一题";
@@ -70,10 +71,23 @@
         });
         document.querySelectorAll('input[name="type"]').forEach(elem => {
             elem.addEventListener("click", function () {
+                // 切换题型监听器
                 refreshPuzzle();
                 document.getElementById("answer").style = "visibility: hidden;";
                 document.getElementById("show-answer").innerText = "显示答案";
             });
+        });
+        document.querySelector("label.multiply").addEventListener("click", () => {
+            // 点击 radio button 后面的 label 也可以切换题型
+            document.querySelector("input.multiply").click();
+        });
+        document.querySelector("label.obelus").addEventListener("click", () => {
+            // 点击 radio button 后面的 label 也可以切换题型
+            document.querySelector("input.obelus").click();
+        });
+        document.querySelector("label.plus").addEventListener("click", () => {
+            // 点击 radio button 后面的 label 也可以切换题型
+            document.querySelector("input.plus").click();
         });
         document.body.addEventListener("click", () => {
             // 点击答案输入框外面时让输入框失焦，以收起软键盘
