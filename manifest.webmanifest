@@ -1,0 +1,15 @@
+{
+    "name": "乘除法速算出题器",
+    "short_name": "出题器",
+    "start_url": "/index.html",
+    "background_color": "white",
+    "description": "乘除法速算出题器，写给老婆哒！",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ]
+}

@@ -26,6 +26,10 @@ p {
     font-size: 20pt;
 }
 
+#show-answer {
+    font-size: 14pt;
+}
+
 #user-answer {
     width: 80pt;
     height: 30pt;
